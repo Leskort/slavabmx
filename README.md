@@ -1,10 +1,5 @@
 # SLAVABMX
 
-**Раскрытие смелого творчества через визуальное повествование**  
-**Unleashing Bold Creativity Through Visual Storytelling**
-
-[![SLAVABMX Logo](https://via.placeholder.com/150x50/000000/FFFFFF?text=SLAVABMX)](https://github.com/Leskort/slavabmx)
-
 ## Содержание / Table of Contents
 - [Обзор / Overview](#обзор--overview)
 - [Особенности / Features](#особенности--features)
