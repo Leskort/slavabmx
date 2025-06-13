@@ -163,7 +163,8 @@ nav {
     flex: 1 1 25%;
     min-width: 140px;
     max-width: 340px;
-    height: 220px;
+    height: auto;
+    aspect-ratio: 4 / 3;
     border-radius: 18px;
     overflow: hidden;
     display: flex;
@@ -645,7 +646,8 @@ footer {
         order: -1;
         width: 100%;
         max-width: 370px;
-        height: 120px;
+        height: auto;
+        aspect-ratio: 4 / 3;
         margin: 0 auto 18px auto;
         border-radius: 14px;
         box-shadow: 0 4px 24px rgba(0,0,0,0.10);
