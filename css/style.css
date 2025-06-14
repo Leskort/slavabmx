@@ -1080,4 +1080,254 @@ footer {
     .merch-info h3 {
         font-size: 1.2rem;
     }
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    margin: 0 10px;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tab-btn.active {
+    background: #e63946;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Video Grid */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video-item h3 {
+    padding: 15px;
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+.youtube-channel {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.youtube-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.youtube-btn:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        margin: 5px 0;
+        width: 80%;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Instagram Feed Section */
+.instagram-feed {
+    padding: 80px 0;
+    background: var(--dark);
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.instagram-profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    transition: transform 0.3s ease;
+}
+
+.instagram-profile:hover {
+    transform: translateY(-3px);
+}
+
+.instagram-profile i {
+    font-size: 1.4rem;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.instagram-post {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.instagram-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.instagram-media {
+    max-width: 540px !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* Скрыть кнопку "Посмотреть эту публикацию в Instagram" внутри поста */
+.instagram-media div[style*="padding-top: 8px;"] {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .instagram-profile {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 } 
